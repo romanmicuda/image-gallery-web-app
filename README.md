@@ -1,74 +1,94 @@
-# Responsive Image Gallery with Next.js and Tailwind CSS
+# Image Gallery
 
-This project is a simple image gallery built with Next.js 14 and styled using Tailwind CSS. The gallery demonstrates various Tailwind CSS utilities for layout, responsive design, and styling. The images used in the gallery are sourced from placeholder services or downloaded from free image sites.
+A modern image gallery application built with Next.js, TypeScript, and Tailwind CSS. This project allows users to search for images, apply filters, view image details, and manage favorites.
 
 ## Features
 
-- Responsive layout using Tailwind CSS utilities.
-- Image aspect ratio management with `aspect-w` and `aspect-h`.
-- Image object fit and positioning.
-- Responsive columns and spacing.
-- Use of Tailwind CSS utilities for overflow, visibility, and positioning.
+- **Search Functionality**: Search for images by keywords.
+- **Image Filtering**: Apply filters to refine image search results.
+- **Image Details**: View details of images including title and source.
+- **Favorites Management**: Add images to favorites and view them on the profile page.
+- **Responsive Design**: Mobile-friendly layout with Tailwind CSS.
 
-## Setup
+## Installation
 
-Follow these steps to set up and run the project locally.
+To set up the project on your local machine, follow these steps:
 
 ### Prerequisites
 
-- Node.js (v14 or later)
-- npm (or yarn)
+- Node.js (v18 or later)
+- npm or yarn
 
 ### Clone the Repository
 
-```bash
-git clone https://github.com/your-username/my-tailwind-gallery.git
-cd my-tailwind-gallery
+```sh
+git clone https://github.com/yourusername/image-gallery.git
+cd image-gallery
 ```
 
 ### Install Dependencies
 
-Install the necessary npm packages:
+Using npm:
 
-```bash
+```sh
 npm install
 ```
 
-### Configure Tailwind CSS
+Using yarn:
 
-Tailwind CSS is already set up. If you want to customize the configuration, you can edit the `tailwind.config.js` file.
+```sh
+yarn install
+```
 
-### Add Images
+### Configure Environment Variables
 
-- **Placeholder Images**: If you're using placeholder images, no additional setup is required.
-- **Actual Images**: If you have downloaded images, place them in the `public/images/` directory.
+Create a `.env.local` file in the root of the project and add your API key:
 
-### Start the Development Server
+```env
+NEXT_APP_API_KEY=your_api_key_here
+```
 
-Run the development server to see your project in action:
+To obtain an API key, sign up at [Serper Images API](https://google.serper.dev/image) and replace `your_api_key_here` with your actual API key.
 
-```bash
+### Running the Development Server
+
+To start the development server, use the following command:
+
+Using npm:
+
+```sh
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser to view the gallery.
+Using yarn:
 
-## Tailwind CSS Utilities Used
+```sh
+yarn dev
+```
 
-- **Layout**: `container`, `columns-{n}`
-- **Aspect Ratio**: `aspect-w-{n}`, `aspect-h-{n}`
-- **Box Decoration**: `box-decoration-break`
-- **Box Sizing**: `box-border`, `box-content`
-- **Display**: `block`, `inline-block`, etc.
-- **Positioning**: `absolute`, `relative`, `top-{n}`, `left-{n}`
-- **Visibility**: `visible`, `invisible`, `hidden`
-- **Overflow**: `overflow-auto`, `overflow-hidden`
-- **Z-Index**: `z-{n}`
+Navigate to `http://localhost:3000` in your browser to view the application.
 
-## Contributing
+## Project Structure
 
-If you'd like to contribute to this project, please fork the repository and submit a pull request with your changes. Ensure that your changes are well-tested and include appropriate documentation.
+- **`/app`**: Contains the main application components and pages.
+- **`/components`**: Reusable components like `ImageCard`, `SearchBar`, `ImageFilter`, etc.
+- **`/hooks`**: Custom hooks, including `useFetchImage`.
+- **`/context`**: Context providers, such as `FavoritesContext`.
+- **`/types`**: TypeScript type definitions.
+
+## Configuration
+
+- **Tailwind CSS**: Configuration is located in `tailwind.config.js`.
+- **Next.js**: Configuration can be found in `next.config.js`.
 
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Contributing
+
+If you would like to contribute to this project, please fork the repository and submit a pull request. For any issues or feature requests, please use the issue tracker on GitHub.
+
+## Contact
+
+For questions or feedback, you can reach me at [roman.micuda@outlook.com](mailto:roman.micuda@outlook.com).
