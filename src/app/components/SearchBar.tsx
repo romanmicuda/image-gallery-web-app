@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import { SearchBarProps } from "../types";
 
 const SearchBar: React.FC<SearchBarProps> = ({ searchImages }) => {
   const [searchTerm, setSearchTerm] = useState<string>("");
