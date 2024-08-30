@@ -7,7 +7,7 @@ export async function GET(request: Request) {
   const searchTerm = searchParams.get("q") || "apple";
   const location = searchParams.get("location") || "United Kingdom";
   const gl = searchParams.get("gl") || "gb";
-  const num = searchParams.get("num") || "100";
+  const num = searchParams.get("num");
   const autocorrect =
     searchParams.get("autocorrect") === "false" ? false : true;
   const tbs = searchParams.get("tbs") || "qdr:d";

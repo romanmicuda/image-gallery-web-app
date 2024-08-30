@@ -9,13 +9,13 @@ const FavoriteList: React.FC<ImageData> = () => {
   const arrayFavorites = Array.from(favorites);
 
   return (
-    <div>
+    <div className="p-4">
       {arrayFavorites.length === 0 ? (
-        <div>No favorites yet</div>
+        <div className="text-center py-4 text-gray-700">No favorites yet</div>
       ) : (
-        <div>
-          {arrayFavorites.map((favorite) => (
-            <ImageCard imageData={favorite} />
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          {arrayFavorites.map((favorite, index) => (
+            <ImageCard key={index} imageData={favorite} />
           ))}
         </div>
       )}

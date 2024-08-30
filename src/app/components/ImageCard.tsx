@@ -8,10 +8,18 @@ interface ImageCardProps {
 
 const ImageCard: React.FC<ImageCardProps> = ({ imageData }) => {
   return (
-    <div>
-      <img src={imageData.imageUrl} alt={imageData.title} width={200} />
-      <h3>{imageData.title}</h3>
-      <p>{imageData.source}</p>
+    <div className="border border-gray-200 rounded-lg p-4 flex flex-col h-full hover:shadow-md transition">
+      <img
+        src={imageData.imageUrl}
+        alt={imageData.title}
+        className="w-full h-48 object-cover rounded-lg mb-2"
+      />
+      <div className="flex-grow">
+        <h3 className="text-lg font-bold text-primary mb-1">
+          {imageData.title}
+        </h3>
+        <p className="text-gray-600">{imageData.source}</p>
+      </div>
       <AddToFavoriteButton imageDataCard={imageData} />
     </div>
   );

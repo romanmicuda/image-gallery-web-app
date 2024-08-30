@@ -34,10 +34,14 @@ function Dashboard() {
   );
 
   return (
-    <div>
-      <h1>Dashboard</h1>
-      <SearchBar searchImages={searchImages} />
-      <ImageFilter applyFilter={applyFilter} />
+    <div className="p-6 md:p-8 bg-white rounded-lg shadow-md">
+      <h1 className="text-3xl font-bold text-primary mb-6">Dashboard</h1>
+      <div className="mb-6">
+        <SearchBar searchImages={searchImages} />
+      </div>
+      <div className="mb-6">
+        <ImageFilter applyFilter={applyFilter} />
+      </div>
       <ImageList data={data} loading={loading} error={error} />
     </div>
   );

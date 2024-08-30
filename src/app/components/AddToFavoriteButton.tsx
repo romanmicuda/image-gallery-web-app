@@ -11,7 +11,10 @@ const AddToFavoriteButton: React.FC<{ imageDataCard: ImageDataCard }> = ({
 
   return (
     <div>
-      <button onClick={() => toggleToFavorites(imageDataCard)}>
+      <button
+        onClick={() => toggleToFavorites(imageDataCard)}
+        className="mt-2 px-4 py-2 bg-primary text-white rounded hover:bg-primary-dark transition"
+      >
         {favorites.has(imageDataCard) ? "Remove Favorite" : "Add To Favorite"}
       </button>
     </div>

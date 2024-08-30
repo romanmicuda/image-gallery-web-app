@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Link from "next/link";
-import { FavoritesProvider } from "../context/FavoritesContext";
+import Navigation from "../components/Navigation";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,16 +16,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
-        <nav>
-          <Link href="/">Home</Link>
-          <Link href="/dashboard">Dashboard</Link>
-          <Link href="/dashboard/profile">Profile</Link>
-        </nav>
-
-        {children}
-      </body>
-    </html>
+    <div>
+      <Navigation />
+      {children}
+    </div>
   );
 }
